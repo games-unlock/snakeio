@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bağlan</title>
+</head>
+<body>
+
+    <form id="baglanForm">
+        <input type="text" id="nickname" name="nickname" placeholder="Your Name" title="" spellcheck="false" style="position: absolute; top: 497px; left: 485px; width: 260px; height: 35px; font-size: 18px; background-color: rgba(0, 0, 0, 0); border: 0px solid rgb(0, 0, 0); font-family: calibri; font-weight: bold; font-style: italic; color: rgb(235, 72, 71);">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+	document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('baglanForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Sayfa yenilemesini engellemek için formun varsayılan davranışını iptal et
+
+            // Input değerini al
+            var username = document.getElementById('nickname').value;
+
+            // Diğer işlemleri buraya ekleyebilirsiniz.
+
+            // Form submit işlemi
+            window.location.href = "index.html?nickname=" + encodeURIComponent(username);
+        });
+		});
+    </script>
+
+</body>
+</html>
